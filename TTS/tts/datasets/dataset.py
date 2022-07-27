@@ -188,7 +188,7 @@ class TTSDataset(Dataset):
         print(f"{indent}| > Number of instances : {len(self.samples)}")
 
     def load_wav(self, filename):
-        waveform = self.ap.load_wav(filename)
+        waveform = self.ap.load_wav(filename, sr=22050)
         assert waveform.size > 0
         return waveform
 
